@@ -8,8 +8,11 @@ class AppDelegate
   	controller = TapController.alloc.initWithNibName(nil, bundle: nil)
   	nav_controller = UINavigationController.alloc.initWithRootViewController(controller)
 
+    alphabet_controller = AlphabetController.alloc.initWithNibName(nil, bundle: nil)
+  
+
   	tab_controller = UITabBarController.alloc.initWithNibName(nil, bundle: nil)
-  	tab_controller.viewControllers = [nav_controller]
+  	tab_controller.viewControllers = [alphabet_controller, nav_controller]
   	@window.rootViewController = tab_controller
 
 
