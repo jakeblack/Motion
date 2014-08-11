@@ -11,17 +11,26 @@ class AlphabetController < UIViewController
 
 		@table.dataSource = self
 
+		@data = ("A".."Z").to_a
+
+
 	end
 
 
 	def tableView(tableView, cellForRowAtIndexPath: indexPath)
 
+		cell.textLabel.text = @data[indexPath.row]
+
+		cell
+
 	end
 
 	def tableView(tableView, numberOfRowsInSection: section)
 
+		@data.count
+
 	end
 
-	
+
 
 end
